@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6c3fc5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b06ab3;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Background circle -->
+  <circle cx="200" cy="200" r="200" fill="url(#bg)" />
+  <!-- Body/shoulders -->
+  <ellipse cx="200" cy="310" rx="110" ry="80" fill="#e0d4f7" />
+  <!-- Head -->
+  <circle cx="200" cy="165" r="75" fill="#f5e6d8" />
+  <!-- Hair -->
+  <ellipse cx="200" cy="120" rx="78" ry="55" fill="#3b1a1a" />
+  <ellipse cx="160" cy="175" rx="22" ry="50" fill="#3b1a1a" />
+  <ellipse cx="240" cy="175" rx="22" ry="50" fill="#3b1a1a" />
+  <!-- Eyes -->
+  <circle cx="178" cy="162" r="9" fill="#3b1a1a" />
+  <circle cx="222" cy="162" r="9" fill="#3b1a1a" />
+  <circle cx="181" cy="159" r="3" fill="#fff" />
+  <circle cx="225" cy="159" r="3" fill="#fff" />
+  <!-- Smile -->
+  <path d="M182 188 Q200 205 218 188" stroke="#c0806a" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- Initials overlay hint -->
+  <text x="200" y="370" font-family="Segoe UI, sans-serif" font-size="18" fill="rgba(255,255,255,0.7)" text-anchor="middle">Replace with your photo</text>
+</svg>

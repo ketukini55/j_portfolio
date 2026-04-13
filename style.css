@@ -1,0 +1,243 @@
+/* ===========================
+   Jagruti Mane — Portfolio CSS
+   ===========================
+   Feel free to change colors, fonts, and sizes!
+   Each section is clearly labeled so it's easy to find.
+*/
+
+/* --- Reset & Base Styles --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f4f9;
+  color: #333;
+  line-height: 1.7;
+}
+
+/* --- Header --- */
+header {
+  background: linear-gradient(135deg, #6c3fc5 0%, #b06ab3 100%);
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px 40px;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+header p.tagline {
+  font-size: 1.15rem;
+  opacity: 0.9;
+  margin-top: 6px;
+}
+
+/* --- Navigation (optional, easy to add links later) --- */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  background-color: #5a32a3;
+  padding: 12px 20px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #f0e6ff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* --- Main Content Container --- */
+main {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* --- Section Titles --- */
+section {
+  margin-bottom: 50px;
+}
+
+section h2 {
+  font-size: 1.7rem;
+  color: #6c3fc5;
+  border-bottom: 3px solid #b06ab3;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+/* --- Profile Photo Section --- */
+.profile-photo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 50px;
+}
+
+.profile-photo-section img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #b06ab3;
+  box-shadow: 0 4px 18px rgba(108, 63, 197, 0.25);
+}
+
+.photo-caption {
+  font-size: 0.9rem;
+  color: #888;
+  font-style: italic;
+}
+
+/* --- About Me --- */
+#about p {
+  font-size: 1.05rem;
+  color: #444;
+  max-width: 700px;
+}
+
+/* --- Skills --- */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-badge {
+  background: #ede4ff;
+  color: #5a32a3;
+  border-radius: 20px;
+  padding: 7px 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: 1.5px solid #b06ab3;
+}
+
+/* --- Projects --- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 22px;
+}
+
+.project-card {
+  background: #fff;
+  border: 2px solid #e0d4f7;
+  border-radius: 12px;
+  padding: 22px 20px;
+  box-shadow: 0 2px 10px rgba(108, 63, 197, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(108, 63, 197, 0.15);
+}
+
+.project-card h3 {
+  font-size: 1.1rem;
+  color: #6c3fc5;
+  margin-bottom: 8px;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 12px;
+  color: #b06ab3;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+/* --- Contact --- */
+#contact .contact-list {
+  list-style: none;
+  padding: 0;
+}
+
+#contact .contact-list li {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#contact .contact-list li span.icon {
+  font-size: 1.3rem;
+}
+
+#contact .contact-list a {
+  color: #6c3fc5;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#contact .contact-list a:hover {
+  text-decoration: underline;
+}
+
+/* --- Footer --- */
+footer {
+  text-align: center;
+  padding: 24px 20px;
+  background-color: #5a32a3;
+  color: #ddd;
+  font-size: 0.88rem;
+  margin-top: 20px;
+}
+
+footer span {
+  color: #f0c0f0;
+}
+
+/* ===========================
+   Responsive Design
+   Works great on phones & tablets!
+=========================== */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav {
+    gap: 14px;
+  }
+
+  .profile-photo-section img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
