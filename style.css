@@ -658,8 +658,16 @@ footer {
 }
 
 @media (max-width: 480px) {
+  nav {
+    flex-wrap: wrap;
+    padding: 10px 14px;
+    gap: 6px;
+  }
+
   .nav-links {
-    display: none; /* Hide nav links on very small screens */
+    gap: 10px;
+    font-size: 0.82rem;
+    flex-wrap: wrap;
   }
 
   .hero-name {
