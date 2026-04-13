@@ -10,20 +10,15 @@
   ====================================================== -->
   <title>Jagruti Mane | Portfolio</title>
 
+  <!-- Google Fonts – gives us nicer text styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
   <!-- Link to our CSS file for all the colors and layout -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- =====================================================
-       HEADER
-       Change the name and tagline (the line below the name)
-       to personalise this section.
-  ===================================================== -->
-  <header>
-    <h1>Jagruti Mane</h1>
-    <p class="tagline">Aspiring Developer &amp; Creative Thinker</p>
-  </header>
 
   <!-- =====================================================
        NAVIGATION BAR
@@ -31,116 +26,285 @@
        Each href="#id" scrolls to the section with that id.
   ===================================================== -->
   <nav>
-    <a href="#photo">Photo</a>
-    <a href="#about">About Me</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+    <div class="nav-logo">JM</div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </nav>
+
+  <!-- =====================================================
+       HERO SECTION
+       This is the big top section with your photo and name.
+       Change the name, title, and description below.
+  ===================================================== -->
+  <section id="hero">
+    <div class="hero-content">
+
+      <!-- LEFT: text side -->
+      <div class="hero-text">
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name">Jagruti Mane</h1>
+        <p class="hero-title">Aspiring Web Developer &amp; Creative Thinker</p>
+        <p class="hero-bio">
+          A passionate and curious learner who loves exploring technology
+          and creativity. Currently building skills in web development and
+          turning ideas into beautiful digital experiences.
+        </p>
+        <div class="hero-buttons">
+          <!-- 🔗 Update the href to link to your CV or any section you like -->
+          <a href="#contact" class="btn btn-primary">Get In Touch</a>
+          <a href="#projects" class="btn btn-outline">View Projects</a>
+        </div>
+      </div>
+
+      <!-- RIGHT: photo side -->
+      <!-- ======================================================
+           HOW TO ADD YOUR PHOTO:
+           1. Copy your photo file (IMG-20260402-WA0006.jpg) into
+              the same folder as this index.html file.
+           2. The src below already points to that filename – done!
+           3. If your photo has a different name, change the src="..."
+              value to match your file name.
+      ====================================================== -->
+      <div class="hero-photo-wrapper">
+        <img
+          src="IMG-20260402-WA0006.jpg"
+          alt="Photo of Jagruti Mane"
+          class="hero-photo"
+          onerror="this.onerror=null;this.src='profile.svg';"
+        />
+      </div>
+
+    </div>
+
+    <!-- Decorative wave at the bottom of the hero -->
+    <div class="hero-wave">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#f5f0ff"/>
+      </svg>
+    </div>
+  </section>
 
   <main>
 
     <!-- =================================================
-         PROFILE PHOTO SECTION
-         Replace "profile.jpg" with your own photo file name.
-         Just place your photo in the same folder as this file
-         and update the src="profile.jpg" line below.
-    ================================================= -->
-    <section id="photo" class="profile-photo-section">
-      <h2>My Photo</h2>
-
-      <!-- 👇 Replace profile.svg with your actual photo filename, e.g. profile.jpg -->
-      <img src="profile.svg" alt="Photo of Jagruti Mane" />
-
-      <p class="photo-caption">Jagruti Mane</p>
-    </section>
-
-    <!-- =================================================
          ABOUT ME SECTION
-         Edit the paragraph below to write your own bio.
+         Edit the paragraphs below to write your own bio.
     ================================================= -->
     <section id="about">
-      <h2>About Me</h2>
-      <p>
-        Hi! I'm <strong>Jagruti Mane</strong> — a passionate and curious learner
-        who loves exploring technology and creativity. I am currently building my
-        skills in web development and enjoy turning ideas into beautiful digital
-        experiences. When I'm not coding, you'll find me sketching, reading, or
-        trying out new recipes!
-      </p>
-      <p style="margin-top: 12px;">
-        This is my personal portfolio website where I share my journey,
-        projects, and ways to connect with me. Welcome! 😊
-      </p>
+      <div class="section-header">
+        <span class="section-tag">Who I Am</span>
+        <h2>About Me</h2>
+      </div>
+
+      <div class="about-grid">
+        <!-- Small photo inside About section -->
+        <div class="about-photo-col">
+          <img
+            src="IMG-20260402-WA0006.jpg"
+            alt="Jagruti Mane"
+            class="about-photo"
+            onerror="this.onerror=null;this.src='profile.svg';"
+          />
+        </div>
+
+        <!-- Bio text -->
+        <div class="about-text-col">
+          <p>
+            Hi! I'm <strong>Jagruti Mane</strong> — a passionate and curious learner
+            who loves exploring technology and creativity. I am currently building my
+            skills in web development and enjoy turning ideas into beautiful digital
+            experiences.
+          </p>
+          <p>
+            When I'm not coding, you'll find me sketching, reading, or trying out new
+            recipes! This is my personal portfolio website where I share my journey,
+            projects, and ways to connect with me. Welcome! 😊
+          </p>
+
+          <!-- Quick facts cards -->
+          <div class="about-facts">
+            <div class="fact-card">
+              <span class="fact-icon">🎓</span>
+              <span class="fact-label">Beginner Developer</span>
+            </div>
+            <div class="fact-card">
+              <span class="fact-icon">🌍</span>
+              <span class="fact-label">India</span>
+            </div>
+            <div class="fact-card">
+              <span class="fact-icon">💡</span>
+              <span class="fact-label">Creative Thinker</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- =================================================
          SKILLS SECTION
-         Add or remove skill badges below.
-         Copy one <span class="skill-badge"> line to add a new skill.
+         Add or remove skill items below.
+         Each skill has an icon, name, and a progress bar.
+         Change the "width" style to set how strong each skill is
+         (e.g. width:80% means 80 out of 100).
     ================================================= -->
-    <section id="skills">
-      <h2>Skills</h2>
+    <section id="skills" class="skills-section">
+      <div class="section-header">
+        <span class="section-tag">What I Know</span>
+        <h2>My Skills</h2>
+      </div>
+
       <div class="skills-grid">
-        <span class="skill-badge">HTML</span>
-        <span class="skill-badge">CSS</span>
-        <span class="skill-badge">Problem Solving</span>
-        <span class="skill-badge">Creative Thinking</span>
-        <span class="skill-badge">Communication</span>
-        <!-- ✏️ Add more skills here, for example:
-        <span class="skill-badge">JavaScript</span>
-        <span class="skill-badge">Python</span>
-        -->
+
+        <!-- Skill 1 -->
+        <div class="skill-card">
+          <div class="skill-top">
+            <span class="skill-icon">🌐</span>
+            <span class="skill-name">HTML</span>
+            <span class="skill-pct">75%</span>
+          </div>
+          <div class="skill-bar-bg">
+            <!-- ✏️ Change the width percentage to match your level -->
+            <div class="skill-bar-fill" style="width: 75%;"></div>
+          </div>
+        </div>
+
+        <!-- Skill 2 -->
+        <div class="skill-card">
+          <div class="skill-top">
+            <span class="skill-icon">🎨</span>
+            <span class="skill-name">CSS</span>
+            <span class="skill-pct">70%</span>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" style="width: 70%;"></div>
+          </div>
+        </div>
+
+        <!-- Skill 3 -->
+        <div class="skill-card">
+          <div class="skill-top">
+            <span class="skill-icon">🧠</span>
+            <span class="skill-name">Problem Solving</span>
+            <span class="skill-pct">80%</span>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" style="width: 80%;"></div>
+          </div>
+        </div>
+
+        <!-- Skill 4 -->
+        <div class="skill-card">
+          <div class="skill-top">
+            <span class="skill-icon">💬</span>
+            <span class="skill-name">Communication</span>
+            <span class="skill-pct">85%</span>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" style="width: 85%;"></div>
+          </div>
+        </div>
+
+        <!-- Skill 5 -->
+        <div class="skill-card">
+          <div class="skill-top">
+            <span class="skill-icon">✏️</span>
+            <span class="skill-name">Creative Thinking</span>
+            <span class="skill-pct">90%</span>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" style="width: 90%;"></div>
+          </div>
+        </div>
+
+        <!-- Skill 6 — add or remove as you like -->
+        <div class="skill-card">
+          <div class="skill-top">
+            <span class="skill-icon">📱</span>
+            <span class="skill-name">Responsive Design</span>
+            <span class="skill-pct">65%</span>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" style="width: 65%;"></div>
+          </div>
+        </div>
+
+        <!-- ✏️ Copy one skill-card block above to add a new skill -->
+
       </div>
     </section>
 
     <!-- =================================================
          PROJECTS SECTION
          Copy one entire <div class="project-card"> block
-         to add a new project. Update the title, description,
-         and link for each project.
+         to add a new project. Update the emoji, title,
+         description, and link for each project.
     ================================================= -->
     <section id="projects">
-      <h2>Projects</h2>
+      <div class="section-header">
+        <span class="section-tag">My Work</span>
+        <h2>Projects</h2>
+      </div>
+
       <div class="projects-grid">
 
         <!-- Project 1 -->
         <div class="project-card">
+          <div class="project-emoji">💻</div>
           <h3>Personal Portfolio Website</h3>
           <p>
             This website! Built using only HTML and CSS as my very first
             web development project. Fully responsive and easy to customise.
           </p>
+          <div class="project-tags">
+            <span>HTML</span><span>CSS</span>
+          </div>
           <!-- 🔗 Replace # with the URL of your project (e.g. GitHub link) -->
-          <a href="#">View Project →</a>
+          <a href="#" class="project-link">View Project →</a>
         </div>
 
         <!-- Project 2 — placeholder, update when you have a real project -->
         <div class="project-card">
+          <div class="project-emoji">🎨</div>
           <h3>Project Name Here</h3>
           <p>
             A short description of what this project does and what
             technologies or skills you used to build it.
           </p>
-          <a href="#">View Project →</a>
+          <div class="project-tags">
+            <span>HTML</span><span>CSS</span>
+          </div>
+          <a href="#" class="project-link">View Project →</a>
         </div>
 
         <!-- Project 3 — placeholder -->
         <div class="project-card">
+          <div class="project-emoji">🚀</div>
           <h3>Project Name Here</h3>
           <p>
             Describe your project here. What problem does it solve?
             What did you learn while building it?
           </p>
-          <a href="#">View Project →</a>
+          <div class="project-tags">
+            <span>HTML</span><span>CSS</span>
+          </div>
+          <a href="#" class="project-link">View Project →</a>
         </div>
 
         <!-- ✏️ To add a new project, copy the block below and fill in your details:
 
         <div class="project-card">
+          <div class="project-emoji">⭐</div>
           <h3>Your Project Title</h3>
           <p>Your project description.</p>
-          <a href="https://github.com/yourusername/yourproject">View Project →</a>
+          <div class="project-tags">
+            <span>HTML</span><span>CSS</span>
+          </div>
+          <a href="https://github.com/yourusername/yourproject" class="project-link">View Project →</a>
         </div>
 
         -->
@@ -154,35 +318,59 @@
          to your real details.
     ================================================= -->
     <section id="contact">
-      <h2>Contact Me</h2>
-      <ul class="contact-list">
+      <div class="section-header">
+        <span class="section-tag">Say Hello</span>
+        <h2>Contact Me</h2>
+      </div>
 
-        <!-- Email — replace with your real email address -->
-        <li>
-          <span class="icon">📧</span>
-          <a href="mailto:your.email@example.com">your.email@example.com</a>
-        </li>
+      <div class="contact-grid">
 
-        <!-- LinkedIn — replace the href with your LinkedIn profile URL -->
-        <li>
-          <span class="icon">💼</span>
-          <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
-            LinkedIn Profile
+        <!-- Left: short invite text -->
+        <div class="contact-text">
+          <p>
+            I'd love to hear from you! Whether you have a question, a project idea,
+            or just want to say hi — drop me a message. 😊
+          </p>
+          <p style="margin-top: 12px;">
+            I try to reply within 24 hours.
+          </p>
+        </div>
+
+        <!-- Right: contact cards -->
+        <div class="contact-cards">
+
+          <!-- Email — replace with your real email address -->
+          <a href="mailto:your.email@example.com" class="contact-card">
+            <span class="contact-icon">📧</span>
+            <div>
+              <p class="contact-card-label">Email</p>
+              <p class="contact-card-value">your.email@example.com</p>
+            </div>
           </a>
-        </li>
 
-        <!-- GitHub — replace the href with your GitHub profile URL -->
-        <li>
-          <span class="icon">🐙</span>
-          <a href="https://github.com/yourusername" target="_blank">
-            GitHub Profile
+          <!-- LinkedIn — replace the href with your LinkedIn profile URL -->
+          <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="contact-card">
+            <span class="contact-icon">💼</span>
+            <div>
+              <p class="contact-card-label">LinkedIn</p>
+              <p class="contact-card-value">linkedin.com/in/yourprofile</p>
+            </div>
           </a>
-        </li>
 
-        <!-- ✏️ To add more contact links, copy one <li> block above
-             and update the icon, link text, and href. -->
+          <!-- GitHub — replace the href with your GitHub profile URL -->
+          <a href="https://github.com/ketukini55" target="_blank" class="contact-card">
+            <span class="contact-icon">🐙</span>
+            <div>
+              <p class="contact-card-label">GitHub</p>
+              <p class="contact-card-value">github.com/ketukini55</p>
+            </div>
+          </a>
 
-      </ul>
+          <!-- ✏️ To add more contact links, copy one contact-card block above
+               and update the icon, label, value, and href. -->
+
+        </div>
+      </div>
     </section>
 
   </main>
@@ -192,7 +380,15 @@
        Update the year and your name if needed.
   ===================================================== -->
   <footer>
-    <p>&copy; 2025 <span>Jagruti Mane</span>. Made with ❤️ using HTML &amp; CSS.</p>
+    <div class="footer-inner">
+      <p class="footer-logo">JM</p>
+      <p class="footer-copy">&copy; 2025 <strong>Jagruti Mane</strong>. Made with ❤️ using HTML &amp; CSS.</p>
+      <div class="footer-links">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
   </footer>
 
 </body>
