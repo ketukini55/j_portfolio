@@ -10,7 +10,8 @@ A beginner-friendly personal portfolio website built with **HTML and CSS only** 
 |------|-------------|
 | `index.html` | The main web page (structure & content) |
 | `style.css` | All the colours, fonts, and layout |
-| `profile.svg` | Placeholder profile image (replace with your own photo) |
+| `profile.svg` | Fallback placeholder image (shown if your photo is missing) |
+| `IMG-20260402-WA0006.jpg` | **Your profile photo** — upload this file to the repository! |
 | `README.md` | This guide |
 
 ---
@@ -23,31 +24,33 @@ A beginner-friendly personal portfolio website built with **HTML and CSS only** 
 
 ---
 
+## 📸 IMPORTANT — Add Your Photo
+
+The website is ready to display your photo. To make it appear:
+
+1. Upload your photo file named **`IMG-20260402-WA0006.jpg`** to this repository  
+   *(GitHub → Add file → Upload files → choose your photo → Commit)*
+2. Refresh the page — your photo will appear automatically!
+
+> If you want to use a different file name, open `index.html` and find the two lines that say `src="IMG-20260402-WA0006.jpg"` and change both to your file name.
+
+---
+
 ## ✏️ How to Edit the Content
 
 All edits are made inside the **`index.html`** file. Open it in any text editor (Notepad, VS Code, etc.) and look for the comments that start with `<!-- =====` — they explain every section.
 
-### 1. Change your name or tagline
-Find this part in `index.html`:
+### 1. Change your name or title
+Find the hero section in `index.html`:
 ```html
-<h1>Jagruti Mane</h1>
-<p class="tagline">Aspiring Developer &amp; Creative Thinker</p>
+<h1 class="hero-name">Jagruti Mane</h1>
+<p class="hero-title">Aspiring Web Developer &amp; Creative Thinker</p>
 ```
 Change the text between the tags to whatever you like.
 
 ---
 
-### 2. Add your profile photo
-1. Copy your photo into the same folder as `index.html`.
-2. Rename your photo to `profile.jpg` **OR** update the `src` attribute in the HTML:
-```html
-<img src="profile.jpg" alt="Photo of Jagruti Mane" />
-```
-Change `profile.svg` to your actual file name (e.g. `profile.jpg` or `my-photo.png`).
-
----
-
-### 3. Edit the About Me section
+### 2. Edit the About Me section
 Find the `<section id="about">` block and change the paragraph text:
 ```html
 <p>
@@ -57,43 +60,59 @@ Find the `<section id="about">` block and change the paragraph text:
 
 ---
 
-### 4. Add or remove a Skill
-Skills are displayed as colourful badges. To add one, copy this line inside the `<div class="skills-grid">` section:
+### 3. Add or remove a Skill
+Skills are displayed as cards with a progress bar. To add a new skill, copy a `skill-card` block and update the icon, name, percentage, and bar width:
 ```html
-<span class="skill-badge">Your New Skill</span>
+<div class="skill-card">
+  <div class="skill-top">
+    <span class="skill-icon">⭐</span>
+    <span class="skill-name">Your Skill</span>
+    <span class="skill-pct">70%</span>
+  </div>
+  <div class="skill-bar-bg">
+    <div class="skill-bar-fill" style="width: 70%;"></div>
+  </div>
+</div>
 ```
 
 ---
 
-### 5. Add a new Project
+### 4. Add a new Project
 Inside the `<section id="projects">` block, copy and paste this project card template:
 ```html
 <div class="project-card">
+  <div class="project-emoji">⭐</div>
   <h3>Your Project Title</h3>
   <p>A short description of your project and what you built.</p>
-  <a href="https://github.com/yourusername/yourproject">View Project →</a>
+  <div class="project-tags">
+    <span>HTML</span><span>CSS</span>
+  </div>
+  <a href="https://github.com/yourusername/yourproject" class="project-link">View Project →</a>
 </div>
 ```
-Replace the title, description, and link with your actual project details.
+Replace the emoji, title, description, tags, and link with your actual project details.
 
 ---
 
-### 6. Update Contact Information
+### 5. Update Contact Information
 Find the `<section id="contact">` block. Update each `<a href="...">` link:
 
 - **Email:** Change `your.email@example.com` to your real email address.
 - **LinkedIn:** Change the URL to your LinkedIn profile link.
 - **GitHub:** Change the URL to your GitHub profile link.
 
-To add a new contact method, copy one `<li>` block and update the emoji icon, link text, and URL.
-
 ---
 
 ## 🎨 How to Change Colours
 
-Open `style.css` and look for the colour codes (they look like `#6c3fc5`).
+Open `style.css` and look for the colour section at the top. The comment block explains which colours to change:
 
-The main purple colour is `#6c3fc5` and the pink accent is `#b06ab3`. Replace these with any colour you like. You can find colour codes at [coolors.co](https://coolors.co) or [htmlcolorcodes.com](https://htmlcolorcodes.com).
+- Main purple: `#7c3aed`
+- Lighter purple: `#9d4edd`
+- Background: `#f5f0ff`
+- Dark headings: `#1e1b4b`
+
+Replace any of these values with a new colour code. Find colour codes at [coolors.co](https://coolors.co) or [htmlcolorcodes.com](https://htmlcolorcodes.com).
 
 ---
 
